@@ -5,7 +5,9 @@ const cookieParser = require('cookie-parser');
 
 const usersRoute = require('./routes/users.js');
 
-mongoose.connect('mongodb+srv://saba1738:mancesteri1878@mycluster.r7kvz.mongodb.net/FacebookClone?retryWrites=true&w=majority', 
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGO_URI, 
     { useNewUrlParser : true, useUnifiedTopology : true },
     () => console.log('Connected To DB')
 )
