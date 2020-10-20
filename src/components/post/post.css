@@ -1,0 +1,50 @@
+.post {
+    background-color: white;
+    margin: 20px 0;
+    padding: 25px 30px 0 30px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.post > .top {
+    display: flex;
+}
+
+.post > p {
+    text-align: left;
+    word-break: break-all;
+    margin: 30px 0;
+}
+
+.post > .top > .info {
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+
+.post > .top > .info > * {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post > .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.post > .actions > * {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    color: rgba(140, 140, 140);
+}
+
+.post > .actions > *:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.post > .actions > *:active {
+    background-color: rgb(220, 220, 220);
+}

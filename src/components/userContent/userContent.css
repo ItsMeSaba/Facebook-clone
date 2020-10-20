@@ -1,0 +1,7 @@
+.userContent {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 20px;
+    width: 75vw;
+    margin: 20px auto;
+}

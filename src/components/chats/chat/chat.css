@@ -1,0 +1,48 @@
+.chat {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(100, 100, 100, .1);
+}
+
+.chat:hover {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+
+.chat > h5 {
+    color: rgb(100, 100, 100);
+    font-weight: 400;
+}
+
+.chat > .image {
+    margin: 5px 0 0 0;
+}
+
+.chat > .aboutChat {
+    display: flex;
+}
+
+.chat > .aboutChat > .info {
+    padding: 0 0 0 15px;
+}
+
+.chat > .aboutChat > h5 {
+    font-weight: 600;
+    color: rgb(150, 150, 150);
+}
+
+.chat > .aboutChat > div > * {
+    margin: 0;
+    font-weight: 600;
+}
+
+.chat > .aboutChat h4 {
+    color: rgb(40, 40, 40)
+}
+
+.chat > .aboutChat h5 {
+    font-weight: 400;
+    color: rgb(160, 160, 160);
+}

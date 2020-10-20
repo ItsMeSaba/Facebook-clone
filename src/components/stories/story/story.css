@@ -1,0 +1,16 @@
+.story {
+    height: 160px;
+    width: 95px;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+    user-select: none;
+}
+
+.story > h4 {
+    font-size: .8rem;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}

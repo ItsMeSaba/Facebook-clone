@@ -1,0 +1,13 @@
+.currentUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.currentUser > h3 {
+    color: rgb(60, 60, 60);
+    /* font-weight: 400; */
+    font-size: 1.2rem;
+}

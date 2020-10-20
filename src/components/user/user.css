@@ -1,0 +1,26 @@
+.user {
+    width: 100vw;
+    background-color: white;
+}
+
+hr {
+    border: solid 1px rgb(230, 230, 230, .5);
+}
+
+.user .container {
+    width: 700px;
+    margin: auto;
+}
+
+.user .container > h1 {
+    margin: 20px 0 0 0;
+    color: rgb(50, 50, 50);
+}
+
+.user .container > h5 {
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: rgb(40, 40, 40);
+    font-weight: bold;
+    color: rgb(150, 150, 150);
+}

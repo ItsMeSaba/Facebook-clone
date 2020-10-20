@@ -1,0 +1,77 @@
+.authenticate {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: var(--bodyHeight);
+    text-align: center;   
+}
+
+.authenticate > .left {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(66,103,238);
+}
+
+.authenticate > .left > p {
+    text-align: left;
+    width: fit-content;
+    margin: auto;
+}
+
+.authenticate > .left > p > span {
+    font-size: 3.5rem;
+}
+
+.authenticate > .right > .box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: white;
+    padding: 30px 30px;
+    border-radius: 10px;
+} 
+
+.authenticate > .right > .box > h5 {
+    margin: 10px 0 0 0;
+    color: rgb(100, 100, 100);
+}
+
+.authenticate > .right > .box > input {
+    padding: 15px 20px;
+    margin: 10px 0; 
+    border-radius: 10px;
+    outline: none;
+}
+
+.authenticate > .right > .box > input:focus {
+    border-radius: 10px;    
+    box-shadow: 0 0 1px 1px rgb(82, 137, 247);
+}
+
+.authenticate > .right > .box > input {
+    border: solid 1px rgb(100, 100, 100, .5);
+}
+
+.authenticate > .right > .box > input[type='submit'] {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.authenticate > .right > .box > hr {
+    border: solid 1px rgba(150, 150, 150, .2);
+    border-radius: 5px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.authenticate > .right > .box > .primaryButton {
+    background-color: rgb(66,103,238);
+}
+
+.authenticate > .right > .box > .secondaryButton {
+    background-color: rgb(33, 199, 74);
+}

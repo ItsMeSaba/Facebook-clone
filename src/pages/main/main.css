@@ -1,0 +1,13 @@
+.main > .feed{
+    display: flex;
+    position: relative;
+}
+
+.main > .feed > .left {
+    flex: 0.25;
+} 
+
+.main > .feed > .center {
+    flex: 0.4;
+    padding: 0 40px;
+}

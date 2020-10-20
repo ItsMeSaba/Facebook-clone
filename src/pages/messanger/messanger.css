@@ -1,0 +1,13 @@
+.messanger {
+    height: var(--bodyHeight);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.messanger > .container {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+}
