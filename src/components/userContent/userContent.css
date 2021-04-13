@@ -5,3 +5,13 @@
     width: 75vw;
     margin: 20px auto;
 }
+
+
+@media(max-width: 768px) {
+    .userContent {
+        grid-template-columns: 1fr;
+        margin: 0;
+        width: 100vw;
+        grid-row-gap: 20px;
+    }
+}

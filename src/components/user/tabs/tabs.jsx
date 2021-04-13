@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import MessageIcon from '@material-ui/icons/Message';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
+import db from '../../../firebase/firestore'
+// import store from '../../../redux/store'
+import { useSelector } from 'react-redux'
+
 import './tabs.css'
 
-function Tabs() {
+function Tabs({ profileUID, isYourProfile }) {
+    let uid = useSelector(state => state.uid);
+    let [isFollowed, setIsFollowed] = useState(false); 
+    let ref = db.collection('users').doc(`${uid}`).collection('following').doc(`${profileUID}`)
+
+    useEffect(() => {
+        ref.get().then(snapshot =>{
+            if(snapshot.data()) setIsFollowed(true);
+        })
+    }, [ref])
+
+    function follow() {
+        console.log('sdsa', isFollowed)
+        if(!isFollowed) {
+            setIsFollowed(true);
+            return ref.set({ followed : true }, { merge : true });
+        }
+
+        setIsFollowed(false);
+        ref.delete();
+    }
+
     return (
         <div className="tabs">
 
@@ -19,10 +44,16 @@ function Tabs() {
             </div>
 
             <div className="right">
-                <button>Add Friend</button>
+                { !isYourProfile &&
+                    <>
+                        <button onClick={() => follow()}>
+                            { isFollowed ? 'Unfollow' : 'Follow' }
+                        </button>
 
-                <div> <MessageIcon fontSize='small' /> </div>
-                
+                        <div> <MessageIcon fontSize='small' /> </div>
+                    </>
+                }
+
                 <div> <MoreHorizIcon fontSize='small' /> </div>
             </div>
 

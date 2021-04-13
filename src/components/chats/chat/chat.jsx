@@ -1,11 +1,13 @@
 import React from 'react'
 import { Avatar } from '@material-ui/core';
 
+import { Link } from 'react-router-dom';
+
 import './chat.css';
 
-function Chat({ name, lastText, time }) {
+function Chat({ name, lastText, time, uid }) {
     return (
-        <div className='chat'>
+        <Link className='chat' to={`/messanger/${uid}`}>
             <div className="aboutChat">
                 <Avatar />
 
@@ -18,7 +20,7 @@ function Chat({ name, lastText, time }) {
             </div>
 
             <h5> { time } </h5>
-        </div>
+        </Link>
     )
 }
 

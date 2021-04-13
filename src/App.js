@@ -5,55 +5,92 @@ import Main from './pages/main/main.jsx';
 import Profile from './pages/profile/profile.jsx';
 import Messanger from './pages/messanger/messanger.jsx';
 import Loading from './pages/loading/loading.jsx';
+import Header from './components/header/header.jsx';
+import Authenticate from './pages/authenticate/authenticate';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Authenticate from './pages/authenticate/authenticate';
+
+import { addUser } from './redux/actions'
+import { useDispatch } from 'react-redux' 
+
+import { auth } from './firebase/auth' 
+import db from './firebase/firestore' 
 
 
 function App() {
-	let [logged, setLogged] = useState('');
+	const dispatch = useDispatch();
+	let [logged, setLogged] = useState(null);
 
+	auth.onAuthStateChanged(user => {
+		if(!user) {
+			setLogged(false);
+			return false;
+		}
+
+		// let response = await db.collection('users').where('uid', '==', user.uid).get();
+
+		db.collection('users').doc(`${user.uid}`).get().then(response => {
+			let userData = response.data();
+			let id = response.id;
+
+			dispatch(addUser({ id, ...userData }))
+
+			setLogged(true);
+		})
+
+		// let response = await db.collection('users').doc(`${user.uid}`).get();
+
+		// let userData = response.data();
+		// let id = response.id;
+
+		// dispatch(addUser({ id, ...userData }))
+
+		// setLogged(true);
+	})
+	
 	useEffect(() => {
-			document.documentElement.style.setProperty('--bodyHeight', `${window.innerHeight}px`)
-			console.log('height', document.documentElement.style.getPropertyValue('--bodyHeight'));
-
-			(async () => { 
-				let loggedUser = await fetch('http://localhost:5000/api/users/isLoggedIn', {
-					method : "POST",
-					credentials : 'include'
-				}) 
-
-				setLogged(loggedUser);
-			})();
+		document.documentElement.style.setProperty('--bodyHeight', `${window.innerHeight}px`);
 	}, []);
 
 
-
-	if(logged.status === 200) {
+	if(logged === null) {
 		return (
-			<div className="App">
-				<Router>
-					<Switch>
+			<div className='App'>
+				<Loading />
+			</div>
+		)
+	}
 
+
+	if(logged) {
+		return (
+			<Router>
+				<Switch>
+					<Route exact path='/messanger/:userID'>
+						<div className='messangerApp'>	
+							<Header />
+							<Messanger />	
+						</div>
+					</Route>
+
+
+					<div className='App'>
+						<Header />
+						
 						<Route path='/' exact>
 							<Main />
 						</Route>
 
-						<Route path='/profile' exact>
+						<Route path='/:profileUID' exact>
 							<Profile />
 						</Route>
-
-						<Route path='/messanger' exact>
-							<Messanger />
-						</Route>
-
-					</Switch>
-				</Router>
-			</div>
+					</div>
+				</Switch>
+			</Router>
 		);
 	}
 
-	else if(logged.status === 400) {
+	else if(!logged) {
 		return (
 			<div className="App">
 				<Authenticate log={x => setLogged(x)} />
@@ -61,13 +98,13 @@ function App() {
 		)
 	}
 
-	else {
-		return (
-			<div className="App">
-				<Loading />
-			</div>
-		)
-	}
+	// else {
+	// 	return (
+	// 		<div className="App">
+	// 			<Loading />
+	// 		</div>
+	// 	)
+	// }
 }
 
 export default App;

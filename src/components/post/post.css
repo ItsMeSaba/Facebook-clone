@@ -1,41 +1,69 @@
 .post {
     background-color: white;
     margin: 20px 0;
-    padding: 25px 30px 0 30px;
+    /* padding: 25px 30px 0 30px; */
     border-radius: 10px;
     user-select: none;
+    box-shadow: 0 0 15px -13px rgb(0, 0, 0);
 }
 
 .post > .top {
+    color: rgb(0, 0, 0);
     display: flex;
+    padding: 1rem 0 0 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.post > .top > .profileImg {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 1000px;
 }
 
 .post > p {
     text-align: left;
     word-break: break-all;
-    margin: 30px 0;
+    margin: 2rem 1.6rem;
+    font-size: 1.1rem;
 }
 
 .post > .top > .info {
     text-align: left;
     padding: 0 0 0 15px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    /* font-size: 1.2rem; */
 }
 
 .post > .top > .info > * {
     margin: 0;
+    font-weight: 400;
+    /* font-size: 1rem; */
+}
+
+.post > .reacts {
+    margin : 0 1.6rem 1rem 1.6rem;
     font-weight: 400;
 }
 
 .post > .actions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    border-top: solid 1px rgb(220, 220, 220);
+    border-bottom: 
 }
 
 .post > .actions > * {
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 12px 0;
+    padding: 13px 0;
     border-radius: 5px;
     color: rgba(140, 140, 140);
 }
@@ -47,4 +75,62 @@
 
 .post > .actions > *:active {
     background-color: rgb(220, 220, 220);
+}
+
+.post .commentsSection {
+    border-top: solid 1px rgb(220, 220, 220);
+    padding: .4rem .4rem;
+}
+
+.post .commentsSection .comment {
+    display: flex;
+    column-gap: .5rem;
+    margin: 1.3rem 0;
+}
+
+.post .commentsSection .commentText {
+    background-color: rgb(242, 243, 245);
+    border-radius: 20px;
+    padding: .6rem 1rem .7rem 1rem;
+}
+
+.post .commentsSection .comment p {
+    margin: 0;
+    word-break: break-all;
+}
+
+.post .commentsSection .comment .username {
+    /* color: rgb(73, 102, 160); */
+    color: rgb(107, 130, 177);
+    margin: 0 .4rem 0 0;
+}
+
+.post .commentsSection .addComment {
+    background-color: rgb(242, 243, 245); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem .7rem;
+    border-radius: 1000px;
+    margin: 0 0 1.2rem 0;
+}
+
+.post .commentsSection .addComment input {
+
+}
+
+.post .commentsSection .addComment input[type='text'] {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 .7rem;
+}
+
+.post .commentsSection .addComment .addCommentIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(80, 80, 80);
 }

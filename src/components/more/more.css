@@ -1,9 +1,20 @@
+.more {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    cursor: pointer;
+    background-color: white;
+    transform: translateY(calc(100% + 10px));
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px -5px rgb(0, 0, 0);
+    z-index: 100;
+}
+
 .moreRow {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
-    cursor: pointer;
 }
 
 .moreRow:hover {
@@ -19,5 +30,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 3px 0;
+    margin: 0 0 3px 0; 
 }

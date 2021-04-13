@@ -1,5 +1,9 @@
 import React from 'react'
 import './more.css'
+
+
+import { auth } from '../../firebase/auth' 
+
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function MoreRow({ Icon, text }) {
@@ -12,14 +16,18 @@ function MoreRow({ Icon, text }) {
     )
 }
 
-function More() {
+function More({ displayMore }) {
     return (
-        <div className='more'>
-            <MoreRow 
-                Icon={ExitToAppIcon}
-                text="Log out"
-            />
-        <div/>
+        <div className='more' style={{ display : displayMore ? 'initial' : 'none' }}>
+            <div
+              onClick={() => auth.signOut()}
+            >
+                <MoreRow 
+                    Icon={ExitToAppIcon}
+                    text="Log out"
+                />
+            </div>
+        </div>
     )
 }
 

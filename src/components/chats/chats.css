@@ -21,3 +21,17 @@
     border-radius: 15px;
     background-color: rgb(245, 245, 245);
 }
+
+.chats .messangerSearch {
+    padding: 10px 5px;
+}
+
+@media(max-width: 768px) {
+    .chats {
+        flex: 0.15;
+    }
+
+    .chats > input {
+        display: none;
+    }
+}

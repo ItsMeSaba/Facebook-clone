@@ -3,12 +3,13 @@ import './profile.css';
 
 import User from '../../components/user/user.jsx';
 import UserContent from '../../components/userContent/userContent.jsx';
-import Header from '../../components/header/header.jsx';
+// import Header from '../../components/header/header.jsx';
 
-function Profile() {
+
+function Profile() { 
     return (
         <div className="profile">
-            <Header />
+            {/* <Header /> */}
 
             <User name='Saba' />
 

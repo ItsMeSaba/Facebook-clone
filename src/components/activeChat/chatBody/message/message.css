@@ -1,7 +1,7 @@
 .message {
     display: flex;
     align-items: center;
-    padding: 7px 20px;
+    padding: .8rem 20px;
 }
 
 .message .text {
@@ -9,4 +9,10 @@
     margin: 0 10px;
     border-radius: 1000px;
     background-color: rgb(230, 230, 230);
+}
+
+@media(max-width: 768px) {
+    .message {
+        padding: .8rem 8px;
+    }
 }

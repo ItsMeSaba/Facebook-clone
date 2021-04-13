@@ -22,6 +22,6 @@
 }
 
 .loading > img {
-    width: 100px;
+    width: 8rem;
     animation: rotate 2s infinite ease-in-out;
 }

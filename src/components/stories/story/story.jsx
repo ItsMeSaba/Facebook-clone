@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@material-ui/core';
+// import { Avatar } from '@material-ui/core';
 import './story.css'
 
 function story({ image, name }) {
@@ -8,6 +8,7 @@ function story({ image, name }) {
         backgroundSize: 'cover',
         backgroundPosiion: 'center'
     }
+
     return (
         <div className='story' style = { style }>
             {/* <Avatar src={profileSrc} className=''/> */}

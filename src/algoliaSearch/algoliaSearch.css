@@ -1,0 +1,53 @@
+.algoliaSearch {
+    position: relative;
+}
+
+.algoliaSearch form, .algoliaSearch input {
+    width: 100%;
+}
+
+.ais-SearchBox {
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 33px;
+}
+
+.algoliaSearch .searchResultList {
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    transform: translateY(130%);
+    width: 100%;
+    box-shadow: 0 0 10px -5px black;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.algoliaSearch .searchResultList .searchSuggestion {
+    text-align: center;
+    padding: 5px 0;
+    display: block;
+    color: black;
+    cursor: pointer;
+} 
+
+.ais-SearchBox .ais-SearchBox-input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 4px 3px;
+}
+
+.ais-SearchBox .ais-SearchBox-submit {
+    display: none;
+}
+
+.ais-SearchBox .ais-SearchBox-reset {
+    display: none;
+}

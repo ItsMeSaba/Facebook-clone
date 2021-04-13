@@ -1,11 +1,12 @@
 .header {
     display: flex;
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
+    padding: 1rem 20px;
     justify-content: space-between;
     background-color: white;
     position: sticky;
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, .75);
-    /* position: relative; */
+    position: relative;
 }
 
 .header-left {
@@ -18,7 +19,11 @@
     height: 40px;
 }
 
-.header-input {
+/* .header-left .header-search {
+    position: relative;
+}
+
+.header-left .ais-SearchBox {
     display: flex;
     align-items: center;
     background-color: #eff2f5;
@@ -27,12 +32,42 @@
     border-radius: 33px;
 }
 
-.header-input > input {
+.header-left .header-search .searchResultList {
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    transform: translateY(130%);
+    width: 100%;
+    box-shadow: 0 0 10px -5px black;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.header-left .header-search .searchResultList .searchSuggestion {
+    text-align: center;
+    padding: 5px 0;
+    display: block;
+    color: black;
+    cursor: pointer;
+} 
+
+.header-left .ais-SearchBox .ais-SearchBox-input {
     border: none;
     background-color: transparent;
     outline: none;
     padding: 4px 3px;
 }
+
+.header-left .ais-SearchBox .ais-SearchBox-submit {
+    display: none;
+}
+
+.header-left .ais-SearchBox .ais-SearchBox-reset {
+    display: none;
+} */
 
 .header-center {
     display: flex;
@@ -75,4 +110,67 @@
 
 .header-right .header-info > h4 {
     margin: 0 0 0 10px;
+}
+
+
+
+.mobile-header-bottom {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mobile-header-bottom > * {
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-header-bottom > *:hover {
+    background-color: #eff2f5;
+    border-radius: 10px;
+}
+
+.mobile-header-bottom > *:active {
+    background-color: rgba(230, 230, 230);
+    border-radius: 10px;
+}
+
+
+@media(max-width: 768px) {
+    .header {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 10px 5px 10px;
+    }
+
+    .header-center {
+        /* padding: 5px 0; */
+        justify-content: space-around;
+    }
+
+    .header-center > .header-icon {
+        padding: 10px 20px;
+    }
+
+    .header-left {
+        /* display: none; */
+        /* width: 100%; */
+        justify-content: space-around;
+        padding-bottom: 15px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .mobile-header-bottom {
+        display: flex;
+    }
 }

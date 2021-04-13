@@ -1,5 +1,26 @@
 .activeChat {
     display: flex;
     flex-direction: column;
-    flex: 0.55;
+    flex: 1;
+}
+
+.activeChat .messageInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: white;
+}
+
+.activeChat .messageInput > input {
+    width: 90%;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    border-radius: 1000px;
+}
+
+.activeChat .messageInput > div {
+    color: rgb(35, 81, 255);
 }

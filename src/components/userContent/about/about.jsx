@@ -26,7 +26,7 @@ function About({ job, lives, from, relationship }) {
 
                 <AboutRow 
                     Icon={ <LocationOnIcon /> }  
-                    text="Batumi"
+                    text="Tbilisi"
                 />
 
                 <AboutRow 

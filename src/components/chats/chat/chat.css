@@ -46,3 +46,20 @@
     font-weight: 400;
     color: rgb(160, 160, 160);
 }
+
+
+@media(max-width: 768px) {
+    .chat {
+        justify-content: center;
+        padding: 10px 5px;
+    }
+
+    .chat > .aboutChat > .info {
+        display: none;
+    }
+
+    .chat > h5 {
+        display: none;
+    }
+
+}

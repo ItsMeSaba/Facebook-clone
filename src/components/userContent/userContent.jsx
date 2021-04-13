@@ -2,7 +2,7 @@ import React from 'react';
 import './userContent.css';
 
 import About from './about/about.jsx';
-import InputBox from '../inputBox/inputBox.jsx';
+// import InputBox from '../inputBox/inputBox.jsx';
 import UsersPosts from './usersPosts/usersPosts.jsx';
 
 function UserContent() {
@@ -13,7 +13,7 @@ function UserContent() {
             </div>
 
             <div className="right">
-                <InputBox />
+                {/* <InputBox /> */}
 
                 <UsersPosts />
             </div>

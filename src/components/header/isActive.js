@@ -1,0 +1,1 @@
+export const isActive = (loc = '/') => window.location.pathname === loc ? 'active' : '';

@@ -1,6 +1,7 @@
 .main > .feed{
     display: flex;
     position: relative;
+    padding: 1rem 0 0 0;
 }
 
 .main > .feed > .left {
@@ -8,6 +9,27 @@
 } 
 
 .main > .feed > .center {
-    flex: 0.4;
+    flex: 0.45;
     padding: 0 40px;
+    margin: auto;
+}
+
+.main > .feed > .right {
+    flex: 0.3;
+}
+
+
+@media(max-width: 768px) {
+    .main > .feed > .left {
+        display: none;
+    }
+
+    .main > .feed > .center {
+        padding: 0 0;
+        flex: 1;
+        margin: auto;
+    }
+    .main > .feed > .right {
+        display: none;
+    }
 }

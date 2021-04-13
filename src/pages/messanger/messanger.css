@@ -1,5 +1,5 @@
 .messanger {
-    height: var(--bodyHeight);
+    /* height: var(--bodyHeight); */
     overflow: hidden;
     display: flex;
     flex-direction: column;

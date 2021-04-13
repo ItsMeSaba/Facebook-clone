@@ -8,7 +8,8 @@ hr {
 }
 
 .user .container {
-    width: 700px;
+    width: 70vw;
+    /* width: 700px; */
     margin: auto;
 }
 
@@ -17,10 +18,105 @@ hr {
     color: rgb(50, 50, 50);
 }
 
+.user .container .username, .user .container .bio {
+    text-align: center;
+}
+
 .user .container > h5 {
     font-weight: 400;
     margin: 0 0 20px 0;
     color: rgb(40, 40, 40);
     font-weight: bold;
     color: rgb(150, 150, 150);
+}
+
+.user .container .images {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* width: 100%;
+    height: 220px; */
+    /* width: 100%; */
+    height: calc(70vw/16*7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.user .container .images .edit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.user .container .images > img {
+    border-radius: 100px;
+    width: 8rem;
+    height: 8rem;
+    transform: translateY(10%);
+}
+
+.user .container .editor {
+    position: absolute;
+    /* top: 20px; */
+    top: 25%;
+    margin: auto;
+    padding: 10px 0 40px 0;
+    z-index: 99;
+
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -7px black;
+}
+
+.user .container .editor .close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+}
+
+.user .container .editor .buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 10px 0;
+}
+
+.user .container .editor .buttons input  {
+    margin: 0 3px;
+}
+
+.user .container .editor .box .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user .container .editor .box input {
+    padding: 6px 10px;
+}
+
+.user .container .editor .imageURL img {
+    width: 50px;
+    border-radius: 9999px;
+}
+
+@media(max-width: 768px) {
+    .user .container {
+        width: 100vw;
+    }
+    
+    .user .container .images {
+        height: calc(100vw/16*7);
+    }
+
+    .user .container .images > img {
+        /* width; */
+    }
 }

@@ -2,4 +2,15 @@
     --bodyHeight: 0;
 }
 
+.App {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* height: var(--bodyHeight); */
+    min-height: var(--bodyHeight);
+}
 
+.messangerApp {
+    display: grid;
+    height: var(--bodyHeight);
+    grid-template-rows: min-content 1fr;
+}

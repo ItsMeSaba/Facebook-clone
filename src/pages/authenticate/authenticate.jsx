@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+// import { useCollection } from 'react-firebase-hooks/firestore';
+// import signInWithGoogle from '../../firebase/auth';
+
 import Login from '../../components/login/login';
 import Register from '../../components/register/register';
 
@@ -16,6 +19,8 @@ function Authenticate({ log }) {
             <div className="right">
                 { !registered && <Register changeRoute={() => setRegistered(!registered)} log={log}/> }
                 { registered && <Login changeRoute={() => setRegistered(!registered)} log={log}/> }
+
+                {/* <button className='authBtn' onClick={signInWithGoogle}>Sign In With Google</button>  */}
             </div>
         </div>
     )

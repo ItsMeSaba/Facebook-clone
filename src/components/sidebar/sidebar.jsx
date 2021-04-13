@@ -15,7 +15,7 @@ function Sidebar() {
         <div className='sidebar'>
             <SidebarRow Icon={EmojiFlagIcon} title='Pages' />
             <SidebarRow Icon={PeopleIcon} title='Friends' />
-            <Link to='/messanger'><SidebarRow Icon={ChatIcon} title='Messanger' /></Link>
+            <Link to='/messanger/x'><SidebarRow Icon={ChatIcon} title='Messanger' /></Link>
             <SidebarRow Icon={VideoLibraryIcon} title='Videos' />
             <SidebarRow Icon={ExpandMoreOutlinedIcon} title='More' />
         </div>
